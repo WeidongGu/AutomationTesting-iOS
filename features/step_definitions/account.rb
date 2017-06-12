@@ -13,6 +13,11 @@ end
 end
 
 当(/^我点击"([^"]*)"$/) do |element_id|
+    if element_id == "登录"
+        element_id = "loginbutton"
+    end
+    element = find_element accessibility_id: element_id
+    element.click
 end
 
 当(/^等待"([^"]*)"秒$/) do |text|
