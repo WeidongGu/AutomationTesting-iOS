@@ -21,6 +21,7 @@ end
 end
 
 当(/^等待"([^"]*)"秒$/) do |text|
+    sleep text.to_i
 end
 
 当(/^我应该看到"([^"]*)"$/) do |text|
