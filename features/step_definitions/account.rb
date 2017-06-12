@@ -25,4 +25,5 @@ end
 end
 
 当(/^我应该看到"([^"]*)"$/) do |text|
+    assert(driver.get_source.include?(text))
 end
