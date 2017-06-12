@@ -1,4 +1,5 @@
 当(/^我进入"([^"]*)"页面$/) do |text|
+    assert(driver.get_source.include?(text))
 end
 
 当(/^我输入邮箱"([^"]*)"和密码"([^"]*)"$/) do |email , password|
